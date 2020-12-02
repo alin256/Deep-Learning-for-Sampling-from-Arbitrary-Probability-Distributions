@@ -29,7 +29,7 @@ from keras.optimizers import Adam, SGD
 from keras.layers import Dense
 import keras.backend as K
 from keras.callbacks import TerminateOnNaN as K_TerminateOnNaN
-from tensorflow import reset_default_graph as tf_reset_default_graph
+from tensorflow.compat.v1 import reset_default_graph as tf_reset_default_graph
 
 
 
