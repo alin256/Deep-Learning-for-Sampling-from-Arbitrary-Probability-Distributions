@@ -346,7 +346,7 @@ def run_model(load, N_layers, N_units, opt, epochs, N_testvectors, x_train, x_te
 	if (save_results == True):
 		# Weights were loaded, where to save results?
 		if (load == True):
-			raw_in = raw_input("Insert save path: ")
+			raw_in = input("Insert save path: ")
 			if (raw_in != ""):
 				path = raw_in
 
@@ -371,7 +371,7 @@ def run_model(load, N_layers, N_units, opt, epochs, N_testvectors, x_train, x_te
 							str(history.history["maximum"][i]) + "\n")
 				f.close()
 		else:
-			print "History not saved, only possible if load == False and epochs > 0"
+			print("History not saved, only possible if load == False and epochs > 0")
 
 		# KDE of output vectors elements across all output vectors
 		with open(path+"/density_elements", "w") as f:

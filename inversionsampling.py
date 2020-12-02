@@ -61,14 +61,14 @@ def inverse_integral_alpha(u, x_start=0.0, epsilon=1e-08):
 	while (integral_alpha(x_min) > u):
 		x_min -= step	
 		if (x_min < -1e10):
-			print "Failed to find lower boundary" 
+			print("Failed to find lower boundary")
 	if (integral_alpha(x_min) == u):
 			return x_min
  	# Find upper bound
 	while (integral_alpha(x_max) < u):
 		x_max += step
 		if (x_max > 1e10):
-			print "Failed to find upper boundary"
+			print("Failed to find upper boundary")
 	if (integral_alpha(x_max) == u):
 			return x_max
 	# Bisection
@@ -90,14 +90,14 @@ def inverse_integral_beta_x(x, v, y_start=0.0, epsilon=1e-08):
 	while (integral_beta_x(x, y_min) > v):
 		y_min -= step	
 		if (y_min < -1e10):
-			print "Failed to find lower boundary" 
+			print("Failed to find lower boundary")
 	if (integral_beta_x(x, y_min) == v):
 			return y_min
  	# Find upper bound
 	while (integral_beta_x(x, y_max) < v):
 		y_max += step 
 		if (y_max > 1e10):
-			print "Failed to find upper boundary"
+			print("Failed to find upper boundary")
 	if (integral_beta_x(x, y_max) == v):
 			return y_max
 	# Bisection
